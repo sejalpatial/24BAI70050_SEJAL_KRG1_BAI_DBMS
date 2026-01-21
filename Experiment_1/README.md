@@ -49,4 +49,7 @@ Practical use of primary keys and foreign keys
 Importance of data integrity and constraints
 Implementation of role-based database security
 
+![ss1](https://github.com/user-attachments/assets/d957abd1-b65b-44f4-b001-82601fc0217f)
+![ss2](https://github.com/user-attachments/assets/1ed1b01c-f919-4cdb-8de6-e731c9fcd3a9)
+![ss3](https://github.com/user-attachments/assets/92f4311f-018b-43da-8011-1a4184536761)
 
