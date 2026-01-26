@@ -1,0 +1,5 @@
+SELECT * FROM members
+SELECT CURRENT_USER;
+
+INSERT INTO members VALUES (205, 'Aman');
+SELECT * FROM members;
