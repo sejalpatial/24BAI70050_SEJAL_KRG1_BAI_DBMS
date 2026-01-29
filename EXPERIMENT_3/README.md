@@ -1,10 +1,12 @@
 Aim
+
 To understand the basic structure of a PL/SQL program by creating and executing a simple PL/SQL block that includes declaration and execution sections, and to display output using built-in procedures.
 Software Requirements
 o	PostgreSQL
 o	pgAdmin
 
 Objectives
+
 •  To understand the use of the DECLARE section in PL/SQL.
 •  To learn how to declare and initialize variables in PL/SQL.
 •  To use DBMS_OUTPUT.PUT_LINE for displaying output.
@@ -12,6 +14,8 @@ Objectives
 •  To determine salary increment based on a given condition.
 
 Problem Statement
+
+
 Design and implement a simple PL/SQL program that demonstrates the basic structure of a PL/SQL block. The program should include a declaration section to define variables and an execution section to perform operations using those variables and display the results using appropriate output statements.
 Declaration Section (DECLARE)
 Variables are declared and initialized:
@@ -22,6 +26,8 @@ Execution Section (BEGIN ... END)
 DBMS_OUTPUT.PUT_LINE is used to display output.
 
 Practical/Experiment Steps
+
+
 •	Start the PL/SQL environment.
 •	Enable server output to view the program output.
 •	Declare variables for employee name, ID, and salary.
@@ -30,7 +36,11 @@ Practical/Experiment Steps
 •	Use an IF–ELSE statement to check the salary condition.
 •	Display the increment message based on the condition.
 •	Execute the program and observe the output.
+
+
 Procedure
+
+
 •	Open SQL Plus or any PL/SQL-supported interface.
 •	In the DECLARE section, define variables for employee name, employee ID, and salary with appropriate data types.
 •	Initialize the variables with sample values.
@@ -41,6 +51,8 @@ Procedure
 •	Execute the program and verify the output.
 
 Input/Output Analysis
+
+
 DECLARE
 emp_name VARCHAR(50):='neha';
 emp_id NUMBER:=100;
@@ -60,6 +72,8 @@ Output
 ![Output Screenshot](images/Screenshot.png)
 
 Learning Outcomes
+
+
 •	Understand the structure of a PL/SQL block.
 •	Declare and initialize variables in PL/SQL.
 •	Use output statements to display data.
