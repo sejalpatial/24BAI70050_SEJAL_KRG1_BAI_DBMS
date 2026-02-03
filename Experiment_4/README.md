@@ -1,10 +1,15 @@
 AIM
+
 To design and implement PL/SQL programs utilizing conditional control statements such as IF–ELSE, IF–ELSIF–ELSE, ELSIF ladder, and CASE constructs in order to control the flow of execution based on logical conditions and to analyze decision-making capabilities in PL/SQL blocks.
 
 Software Requirements
+
 Database Management System: PostgreSQL
 Database Administration Tool: pgAdmin
+
+
 Objective
+
 To implement control structures in PL/SQL such as:
 
 IF–ELSE
@@ -14,6 +19,7 @@ CASE Statement
 and understand how conditional logic controls the execution flow in PL/SQL programs.
 
 Problem Statement
+
 Develop and execute PL/SQL programs that demonstrate the use of conditional control statements. The programs should evaluate given conditions using IF–ELSE, ELSIF, ELSIF ladder, and CASE statements and display appropriate results, thereby illustrating decision-making capabilities in PL/SQL blocks.
 
 Problem 1: IF–ELSE Statement
@@ -35,6 +41,7 @@ Description
 Write a PL/SQL program to evaluate the grade of a student based on obtained marks using the IF–ELSIF–ELSE statement.
 
 Program
+
 DECLARE
     marks NUMBER := 78;
 BEGIN
