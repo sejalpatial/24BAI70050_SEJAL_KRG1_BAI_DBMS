@@ -1,32 +1,48 @@
-AIM
+# Experiment 04 – Conditional Control Statements in PL/SQL
 
-To design and implement PL/SQL programs utilizing conditional control statements such as IF–ELSE, IF–ELSIF–ELSE, ELSIF ladder, and CASE constructs in order to control the flow of execution based on logical conditions and to analyze decision-making capabilities in PL/SQL blocks.
+---
 
-Software Requirements
+## AIM
 
-Database Management System: PostgreSQL
-Database Administration Tool: pgAdmin
+To design and implement PL/SQL programs utilizing conditional control statements such as **IF–ELSE, IF–ELSIF–ELSE, ELSIF ladder, and CASE constructs** in order to control the flow of execution based on logical conditions and to analyze decision-making capabilities in PL/SQL blocks.
 
+---
 
-Objective
+## Software Requirements
+
+* **Database Management System:** PostgreSQL
+* **Database Administration Tool:** pgAdmin
+
+---
+
+## Objective
 
 To implement control structures in PL/SQL such as:
 
-IF–ELSE
-IF–ELSIF–ELSE
-ELSIF Ladder
-CASE Statement
+* IF–ELSE
+* IF–ELSIF–ELSE
+* ELSIF Ladder
+* CASE Statement
+
 and understand how conditional logic controls the execution flow in PL/SQL programs.
 
-Problem Statement
+---
+
+## Problem Statement
 
 Develop and execute PL/SQL programs that demonstrate the use of conditional control statements. The programs should evaluate given conditions using IF–ELSE, ELSIF, ELSIF ladder, and CASE statements and display appropriate results, thereby illustrating decision-making capabilities in PL/SQL blocks.
 
-Problem 1: IF–ELSE Statement
-Description
+---
+
+## Problem 1: IF–ELSE Statement
+
+### Description
+
 Write a PL/SQL program to check whether a given number is positive or non-positive using the IF–ELSE conditional control statement.
 
-Program
+### Program
+
+```sql
 DECLARE
     num NUMBER := -5;
 BEGIN
@@ -36,12 +52,19 @@ BEGIN
         DBMS_OUTPUT.PUT_LINE('The number is Non-Positive');
     END IF;
 END;
-Problem 2: IF–ELSIF–ELSE Statement
-Description
+```
+
+---
+
+## Problem 2: IF–ELSIF–ELSE Statement
+
+### Description
+
 Write a PL/SQL program to evaluate the grade of a student based on obtained marks using the IF–ELSIF–ELSE statement.
 
-Program
+### Program
 
+```sql
 DECLARE
     marks NUMBER := 78;
 BEGIN
@@ -55,11 +78,19 @@ BEGIN
         DBMS_OUTPUT.PUT_LINE('Grade: Fail');
     END IF;
 END;
-Problem 3: ELSIF Ladder
-Description
+```
+
+---
+
+## Problem 3: ELSIF Ladder
+
+### Description
+
 Write a PL/SQL program to determine the performance status of a student based on marks using an ELSIF ladder.
 
-Program
+### Program
+
+```sql
 DECLARE
     marks NUMBER := 82;
 BEGIN
@@ -75,11 +106,19 @@ BEGIN
         DBMS_OUTPUT.PUT_LINE('Performance: Poor');
     END IF;
 END;
-Problem 4: CASE Statement
-Description
+```
+
+---
+
+## Problem 4: CASE Statement
+
+### Description
+
 Write a PL/SQL program to display the name of the day based on a given day number using the CASE statement.
 
-Program
+### Program
+
+```sql
 DECLARE
     day_num NUMBER := 3;
     day_name VARCHAR2(20);
@@ -97,11 +136,20 @@ BEGIN
 
     DBMS_OUTPUT.PUT_LINE('Day is: ' || day_name);
 END;
-Learning Outcomes
-Understood the use of conditional control statements in PL/SQL.
-Learned how IF–ELSE and IF–ELSIF–ELSE statements control program flow.
-Gained knowledge of using ELSIF ladders for multi-condition evaluation.
-Learned to use CASE statements for simplified decision-making logic.
-Improved understanding of procedural programming concepts in databases.
-Conclusion
+```
+
+---
+
+## Learning Outcomes
+
+1. Understood the use of conditional control statements in PL/SQL.
+2. Learned how IF–ELSE and IF–ELSIF–ELSE statements control program flow.
+3. Gained knowledge of using ELSIF ladders for multi-condition evaluation.
+4. Learned to use CASE statements for simplified decision-making logic.
+5. Improved understanding of procedural programming concepts in databases.
+
+---
+
+## Conclusion
+
 This experiment successfully demonstrated the use of conditional control statements in PL/SQL. By implementing IF–ELSE, IF–ELSIF–ELSE, ELSIF ladder, and CASE statements, the programs illustrated how logical conditions can be used to control execution flow and support decision-making in database-driven applications.
