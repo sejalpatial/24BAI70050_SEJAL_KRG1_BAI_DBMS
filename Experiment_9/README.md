@@ -154,7 +154,8 @@ CALL delete_student(1);
 ---
 
 ## Learning Outcomes
-* Trigger Lifecycle Mastery: Understanding the difference between statement-level and row-level triggers and when to use BEFORE vs AFTER events.
-* Automated Data Calculation: Proficiency in using triggers to derive and populate column values, reducing the logic burden on the application layer.
-* Custom Constraint Enforcement: Ability to implement complex business rules and validations that go beyond standard CHECK constraints.
-* Error Handling and Signaling: Mastery of the RAISE EXCEPTION mechanism to communicate specific business logic failures to the user or application.
+* Understood stored procedures and their importance
+* Learned parameterized SQL operations
+* Performed CRUD operations practically
+* Improved understanding of database security and performance
+* Gained hands-on backend database experience
