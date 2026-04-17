@@ -1,60 +1,51 @@
-CREATE TABLE employee (
-    emp_id INT PRIMARY KEY,
-    emp_name VARCHAR(50),
-    working_hours INT,
-    perhour_salary NUMERIC,
-    total_payable_amount NUMERIC
+CREATE TABLE student (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50),
+    age INT,
+    course VARCHAR(50)
 );
-
---CREATING TRIGGER FUNCTION
-CREATE OR REPLACE FUNCTION CALCULATE_AMOUNT()
-RETURNS TRIGGER
-AS
-$$
+CREATE OR REPLACE PROCEDURE insert_student(
+    s_name VARCHAR,
+    s_age INT,
+    s_course VARCHAR
+)
+LANGUAGE plpgsql
+AS $$
 BEGIN
-	NEW.total_payable_amount=NEW.perhour_salary*NEW.working_hours;
-	IF NEW.total_payable_amount>25000 THEN
-		RAISE EXCEPTION 'AMOUNT IS GREATER THAN 25000';
-	END IF;
-	RETURN NEW;
-END;
-$$
-LANGUAGE PLPGSQL;
-
-
-CREATE OR REPLACE TRIGGER CAL_PAYABLE_AMOUNT
-BEFORE INSERT
-ON EMPLOYEE
-FOR EACH ROW
-EXECUTE FUNCTION CALCULATE_AMOUNT();
-
-
---PAYABLE AMOUNT LESS THAN 25000
-DO
-$$
-BEGIN
-	INSERT INTO EMPLOYEE(EMP_ID, EMP_NAME, WORKING_HOURS, PERHOUR_SALARY) VALUES
-	(1, 'AKASH', 10, 250);
-
-	EXCEPTION
-	WHEN OTHERS THEN
-	RAISE NOTICE '%', SQLERRM;
+    INSERT INTO student(name, age, course)
+    VALUES (s_name, s_age, s_course);
 END;
 $$;
-
-SELECT * FROM EMPLOYEE;
-
---PAYABLE MORE THAN 25000
-DO
-$$
+CREATE OR REPLACE PROCEDURE get_students()
+LANGUAGE plpgsql
+AS $$
 BEGIN
-	INSERT INTO EMPLOYEE(EMP_ID, EMP_NAME, WORKING_HOURS, PERHOUR_SALARY) VALUES
-	(1, 'AKASH', 10, 250000);
-
-	EXCEPTION
-	WHEN OTHERS THEN
-	RAISE NOTICE '%', SQLERRM;
+    PERFORM * FROM student;
 END;
 $$;
-
-SELECT * FROM EMPLOYEE;
+CREATE OR REPLACE PROCEDURE update_student(
+    s_id INT,
+    s_name VARCHAR,
+    s_age INT,
+    s_course VARCHAR
+)
+LANGUAGE plpgsql
+AS $$
+BEGIN
+    UPDATE student
+    SET name = s_name,
+        age = s_age,
+        course = s_course
+    WHERE id = s_id;
+END;
+$$;
+CREATE OR REPLACE PROCEDURE delete_student(s_id INT)
+LANGUAGE plpgsql
+AS $$
+BEGIN
+    DELETE FROM student WHERE id = s_id;
+END;
+$$;
+CALL insert_student('Sejal', 20, 'CSE');
+CALL update_student(1, 'Sejal Patial', 21, 'AI-ML');
+CALL delete_student(1);
